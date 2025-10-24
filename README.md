@@ -41,36 +41,31 @@ We aimed to design a real-time model capable of:
 ## Model Development 
 
 ### Endoscopic YOLO Detection Model
-• Architecture: YOLOv8s (small variant, CSPDarknet-inspired, anchor-free)
-• Framework: PyTorch (Ultralytics YOLOv8 library)
-• Input: 416×416 RGB frames from endoscopic video
-• Training: Fine-tuned on proprietary dataset for 100 epochs (Used GPU)
-• Evaluation Metrics: Precision, Recall, F1-Score, and mean Average Precision
+- Architecture: YOLOv8s (small variant, CSPDarknet-inspired, anchor-free)
+- Framework: PyTorch (Ultralytics YOLOv8 library)
+- Input: 416×416 RGB frames from endoscopic video
+- Training: Fine-tuned on proprietary dataset for 100 epochs (Used GPU)
+- Evaluation Metrics: Precision, Recall, F1-Score, and mean Average Precision
 (mAP@0.5)
 ### True North Classification Model
-• Architecture: CNN classifier trained to predict one of 9 spatial zones (north, south,
+- Architecture: CNN classifier trained to predict one of 9 spatial zones (north, south,
 east, west, and center combinations)
-• Input: Single frame divided into 9 regions; class represents the quadrant containing
+Input: Single frame divided into 9 regions; class represents the quadrant containing
 the known north point.
-• Accuracy: ~92% on out-of-sample holdout set
+Accuracy: ~92% on out-of-sample holdout set
 
 ---
 ## Results and Performance
 
 ### Endoscopic YOLO Detection Model
-• Achieved mean Average Precision (mAP@0.5) = 0.78 on holdout data.
-• Demonstrated >90% precision across most anatomical structures.
-• Primary confusions occur between left and right vocal cords or arytenoids, which
-are visually symmetric.
-• The model’s precision-recall trade-off curve indicated that at 80% recall, the
-system maintained ~85% precision, suggesting balanced sensitivity and reliability
-for clinical use.
+- Achieved mean Average Precision (mAP@0.5) = 0.78 on holdout data.
+- Demonstrated >90% precision across most anatomical structures.
+- Primary confusions occur between left and right vocal cords or arytenoids, which are visually symmetric.
+- The model’s precision-recall trade-off curve indicated that at 80% recall, the system maintained ~85% precision, suggesting balanced sensitivity and reliability for clinical use.
 ### True North Classifier
-• Overall Accuracy: 92%
-• High recall for dominant orientations (north-center, south-center)
-• Lower performance on rare corner orientations (e.g., north-east, south-west) due to
-class imbalance. We plan on retraining with larger dataset in the next phase of
-training.
+- Overall Accuracy: 92%
+- High recall for dominant orientations (north-center, south-center)
+- Lower performance on rare corner orientations (e.g., north-east, south-west) due to class imbalance. We plan on retraining with larger dataset in the next phase of training.
 
 ---
 ## Deployment and Optimization
@@ -88,8 +83,9 @@ frame rates with minimal compute overhead.
 ## Conclusion
 
 The final integrated system successfully
-• Identifies key throat structures,
-• Labels them in real-time, and
-• Assists clinicians with camera orientation feedback.
+- Identifies key throat structures,
+- Labels them in real-time, and
+- Assists clinicians with camera orientation feedback.
+
 The combination of YOLOv8 object detection and the True North classifier provides both spatial awareness and semantic understanding, demonstrating a foundation for AI-
 assisted endoscopy.
