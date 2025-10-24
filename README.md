@@ -37,6 +37,7 @@ We aimed to design a real-time model capable of:
   - Validated annotation integrity  
 
 
+---
 ## Model Development 
 
 ### Endoscopic YOLO Detection Model
@@ -53,6 +54,7 @@ east, west, and center combinations)
 the known north point.
 • Accuracy: ~92% on out-of-sample holdout set
 
+---
 ## Results and Performance
 
 ### Endoscopic YOLO Detection Model
@@ -70,6 +72,7 @@ for clinical use.
 class imbalance. We plan on retraining with larger dataset in the next phase of
 training.
 
+---
 ## Deployment and Optimization
 
 After training, the YOLOv8 model was exported and optimized for on-device deployment:
@@ -81,6 +84,7 @@ camera systems without cloud latency
 The resulting system runs locally on mobile hardware, labeling structures at near real-time
 frame rates with minimal compute overhead.
 
+---
 ## Conclusion
 
 The final integrated system successfully
