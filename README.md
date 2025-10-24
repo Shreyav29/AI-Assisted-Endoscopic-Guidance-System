@@ -1,3 +1,44 @@
+# 🧠 AI-Assisted Endoscopic Guidance System
+
+This project was developed in collaboration with a clinical institution to build an **AI-powered endoscopic guidance system** that can automatically **detect, label, and orient anatomical structures** in real time during endoscopic procedures.  
+The goal was to assist clinicians with **real-time visual feedback**—labeling key throat structures and identifying the **camera’s directional orientation** (“True North”) to improve procedural accuracy and efficiency.
+
+---
+
+## 🚀 Overview
+
+The system combines two complementary AI components:
+
+1. **Endoscopic Object Detection Model** – a YOLOv8-based detection model to identify and label anatomical structures.
+2. **True North Classification Model** – a CNN-based classifier that determines the directional orientation of the endoscope.
+
+These models together provide **spatial awareness** and **semantic understanding** of the endoscopic view, enabling clinicians to navigate efficiently during live procedures.
+
+---
+
+## 🧩 Problem Statement
+
+Manual labeling of anatomical structures during live endoscopy is difficult, inconsistent, and heavily dependent on clinician experience.  
+We aimed to design a real-time model capable of:
+- Detecting and naming relevant throat and airway landmarks (epiglottis, glottis, arytenoids, vocal cords, trachea, etc.)
+- Estimating the **directional alignment** of the endoscope (north/south/east/west/center)
+- Operating efficiently on **mobile hardware** for real-time inference without cloud dependency
+
+---
+
+## 📊 Data Preparation
+
+- **Dataset:** Thousands of endoscopic images collected under clinical supervision  
+- **Annotation Format:** Expert-labeled XML annotations converted to YOLO format  
+- **Preprocessing Pipeline:**
+  - Parsed XML annotations  
+  - Resized and letterboxed images to **416×416**  
+  - Merged left/right anatomical labels for better accuracy  
+  - Validated annotation integrity  
+
+
+
+
 #AI-Assisted Endoscopic Guidance System
 
 ##Project Overview
