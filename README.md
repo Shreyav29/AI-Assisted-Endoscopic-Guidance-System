@@ -1,6 +1,7 @@
-### Disclaimer:
+# 🔒 Disclaimer
 The source code for this project is not publicly shared due to confidentiality and non-disclosure obligations. Only non-sensitive information, high-level architecture, and summary documentation are provided here for reference purposes.
 
+---
 # 🧠 AI-Assisted Endoscopic Guidance System
 
 This project was developed in collaboration with a clinical institution to build an **AI-powered endoscopic guidance system** that can automatically **detect, label, and orient anatomical structures** in real time during endoscopic procedures.  
