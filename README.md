@@ -1,8 +1,7 @@
-# 🧠 AI-Assisted Endoscopic Guidance System
-
 ### Disclaimer:
 The source code for this project is not publicly shared due to confidentiality and non-disclosure obligations. Only non-sensitive information, high-level architecture, and summary documentation are provided here for reference purposes.
 
+# 🧠 AI-Assisted Endoscopic Guidance System
 
 This project was developed in collaboration with a clinical institution to build an **AI-powered endoscopic guidance system** that can automatically **detect, label, and orient anatomical structures** in real time during endoscopic procedures.  
 The goal was to assist clinicians with **real-time visual feedback**—labeling key throat structures and identifying the **camera’s directional orientation** (“True North”) to improve procedural accuracy and efficiency.
